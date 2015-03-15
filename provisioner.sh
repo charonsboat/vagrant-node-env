@@ -21,13 +21,26 @@ apt-get update
 
 printf "Installing a few necessary packages..."
 # install required packages
-apt-get install -y git nodejs nodejs-legacy npm mongodb-org redis-server
+apt-get install -y git npm mongodb-org redis-server
 
 # backup mongodb-org config file
 cp /etc/mongod.conf /etc/mongod.conf.backup
 
 # backup redis-server config file
 cp /etc/redis/redis.conf /etc/redis/redis.conf.backup
+
+printf "Installing nvm..."
+# download package and switch to latest version
+git clone --quiet https://github.com/creationix/nvm.git /home/vagrant/.nvm && cd /home/vagrant/.nvm
+git checkout --quiet `git describe --abbrev=0 --tags`
+
+# automatically source nvm from the .bashrc file on login
+echo "source ~/.nvm/nvm.sh" >> /home/vagrant/.bashrc
+
+# install node with nvm, and set it to the default version
+source /home/vagrant/.nvm/nvm.sh
+nvm install stable
+nvm alias default stable
 
 # make sure npm is up to date
 npm install -g npm
@@ -49,14 +62,6 @@ cp /home/vagrant/.bashrc /home/vagrant/.bashrc.backup
 # override npm with an alias to always call "--no-bin-links" with npm (shouldn't hurt any normal commands)
 # if you don't want npm overridden, comment out the line below
 echo "alias npm='npm --no-bin-links'" >> /home/vagrant/.bashrc
-
-printf "Installing nvm..."
-# download package and switch to latest version
-git clone --quiet https://github.com/creationix/nvm.git /home/vagrant/.nvm && cd /home/vagrant/.nvm
-git checkout --quiet `git describe --abbrev=0 --tags`
-
-# automatically source nvm from the .bashrc file on login
-echo "source ~/.nvm/nvm.sh" >> /home/vagrant/.bashrc
 
 # make sure everything in the vagrant directory is owned by vagrant
 chown -R vagrant:vagrant /home/vagrant --quiet
