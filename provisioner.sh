@@ -41,3 +41,8 @@ npm install -g gulp
 npm install -g grunt-cli
 npm install -g bower
 npm install -g yo
+
+printf "Fixing symlink issue with npm..."
+# override npm with an alias to always call "--no-bin-links" with npm (shouldn't hurt any normal commands)
+# if you don't want npm overridden, comment out the line below
+echo "alias npm='npm --no-bin-links'" >> /home/vagrant/.bashrc
