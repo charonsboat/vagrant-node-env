@@ -21,7 +21,13 @@ apt-get update
 
 printf "Installing a few necessary packages..."
 # install required packages
-apt-get install -y git nodejs nodejs-legacy npm mongodb-org
+apt-get install -y git nodejs nodejs-legacy npm mongodb-org redis-server
+
+# backup mongodb-org config file
+cp /etc/mongod.conf /etc/mongod.conf.backup
+
+# backup redis-server config file
+cp /etc/redis/redis.conf /etc/redis/redis.conf.backup
 
 # make sure npm is up to date
 npm install -g npm

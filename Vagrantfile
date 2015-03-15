@@ -8,5 +8,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # host to guest port forwarding
     config.vm.network :forwarded_port, guest: 1337, host: 1337
 
+    # set up synced folder
+    config.vm.synced_folder "./www", "/home/vagrant/www"
+
+    # call provisioner shell script
     config.vm.provision :shell, path: "./provisioner.sh"
 end
