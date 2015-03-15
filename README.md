@@ -9,7 +9,7 @@ This environment will allow you to build Node apps with minimal setup. You only 
 - VirtualBox: https://www.virtualbox.org/
 - Vagrant:    https://www.vagrantup.com/
 
-You should be able to use your choice of virtual machines, but I have only tested this in VirtualBox. If you have any problems, be sure to [create an issue](./issues).
+You should be able to use your choice of virtual machines, but I have only tested this in VirtualBox. If you have any problems, be sure to [create an issue](https://github.com/renobit/vagrant-node-env/issues).
 
 After you have those set up, you can get started by cloning this repo:
 
