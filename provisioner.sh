@@ -43,6 +43,20 @@ npm install -g bower
 npm install -g yo
 
 printf "Fixing symlink issue with npm..."
+# backup .bashrc since we're going to change it
+cp /home/vagrant/.bashrc /home/vagrant/.bashrc.backup
+
 # override npm with an alias to always call "--no-bin-links" with npm (shouldn't hurt any normal commands)
 # if you don't want npm overridden, comment out the line below
 echo "alias npm='npm --no-bin-links'" >> /home/vagrant/.bashrc
+
+printf "Installing nvm..."
+# download package and switch to latest version
+git clone --quiet https://github.com/creationix/nvm.git /home/vagrant/.nvm && cd /home/vagrant/.nvm
+git checkout --quiet `git describe --abbrev=0 --tags`
+
+# automatically source nvm from the .bashrc file on login
+echo "source ~/.nvm/nvm.sh" >> /home/vagrant/.bashrc
+
+# make sure everything in the vagrant directory is owned by vagrant
+chown -R vagrant:vagrant /home/vagrant --quiet
