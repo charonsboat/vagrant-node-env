@@ -6,8 +6,8 @@ printf "Updating Box..."
 # make sure the box is fully up to date
 apt-get update
 
-# remove below line to allow the system to upgrade
-# apt-get upgrade -y && apt-get dist-upgrade -y
+# uncomment the line below to allow the system to upgrade
+#apt-get upgrade -y && apt-get dist-upgrade -y
 
 printf "Adding MongoDB packages to apt..."
 # import the public key used by apt
