@@ -42,3 +42,11 @@ node server.js
 ```
 
 Now, open ```localhost:1337``` in your browser on your host machine. If everything worked correctly, you should see a "Hello, World!" message.
+
+## Using io.js
+
+This environment uses [nvm](https://github.com/creationix/nvm) in order to manage different versions of Node. If you aren't familiar with nvm, it is a tool that allows you to manage multiple versions of Node at once.
+
+If you want to use io.js in place of Node by default, you can run ```nvm alias default iojs```. This will link the ```node``` command to io.js instead of Node.js. 
+
+If you just want to temporarily switch between Node.js and io.js, you can use the ```nvm use iojs``` and ```nvm use node``` commands as needed.
