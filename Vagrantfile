@@ -6,7 +6,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.box = "ubuntu/trusty64"
 
     # host to guest port forwarding
-    config.vm.network :forwarded_port, guest: 1337, host: 1337
+    config.vm.network :forwarded_port, guest: 1337, host: 3000
 
     # set up synced folder
     config.vm.synced_folder "./www", "/home/vagrant/www"

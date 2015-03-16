@@ -37,8 +37,19 @@ git checkout --quiet `git describe --abbrev=0 --tags`
 # automatically source nvm from the .bashrc file on login
 echo "source ~/.nvm/nvm.sh" >> /home/vagrant/.bashrc
 
-# install node with nvm, and set it to the default version
+# set the source of nvm for this session
 source /home/vagrant/.nvm/nvm.sh
+
+# install iojs with nvm
+nvm install iojs
+
+# make sure npm is up to date
+npm install -g npm
+
+# remove old hash for npm so bash will find the new version
+hash -d npm
+
+# install node with nvm, and set it to the default version
 nvm install stable
 nvm alias default stable
 
