@@ -61,6 +61,7 @@ hash -d npm
 
 printf "Installing common nodejs tools..."
 # install common nodejs tools
+npm install -g pm2
 npm install -g gulp
 npm install -g grunt-cli
 npm install -g bower
