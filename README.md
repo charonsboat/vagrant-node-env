@@ -31,6 +31,14 @@ After a few minutes of downloading, upgrading, and configuring the box, you will
 - The ```www``` directory is synced to ```/home/vagrant/www```
 - Port ```1337``` in the VM is mapped to ```1337``` on localhost
 
+## Included NPM Packages
+
+- [PM2](https://github.com/Unitech/pm2): Process Manager
+- [Gulp](http://gulpjs.com/): Streaming Build System
+- [Grunt](http://gruntjs.com/): Task Runner
+- [Bower](http://bower.io/): Front-End Package Manager
+- [Yeoman](http://yeoman.io/): Project Scaffolding Tool
+
 ## Testing
 
 SSH into your vagrant box and launch the test server:
