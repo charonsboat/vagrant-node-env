@@ -1,6 +1,6 @@
 # vagrant-node-env
 
-A Node.js development environment built on [Vagrant](https://www.vagrantup.com/).
+A Node.js (or io.js) development environment built on [Vagrant](https://www.vagrantup.com/). Get up and running in about 60 seconds.
 
 ## Setup
 
