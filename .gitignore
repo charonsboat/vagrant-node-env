@@ -1,5 +1,9 @@
+# Directories to Ignore
 /.vagrant
 /www/**
-!/www/server.js
+!/www/default
+!/www/default/**
+node_modules
 
+# Files to Ignore
 npm-debug.log.*
