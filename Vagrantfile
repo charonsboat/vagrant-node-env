@@ -1,5 +1,9 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
+# Vim
+# vim: set filetype=ruby:
+# vim: set ft=ruby:
+#
+# Emacs
+# -*- mode: ruby; -*-
 
 VAGRANTFILE_API_VERSION = "2"
 
