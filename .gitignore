@@ -1,5 +1,5 @@
 /.vagrant
-/www/**.*
+/www/**
 !/www/server.js
 
 npm-debug.log.*
