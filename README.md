@@ -46,6 +46,7 @@ SSH into your vagrant box and launch the test server:
 ```bash
 vagrant ssh
 cd www/default
+npm install
 npm start
 ```
 
