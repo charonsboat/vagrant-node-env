@@ -59,3 +59,7 @@ This environment uses [nvm](https://github.com/creationix/nvm) in order to manag
 If you want to use io.js in place of Node by default, you can run ```nvm alias default iojs```. This will link the ```node``` command to io.js instead of Node.js starting with your next terminal session.
 
 If you just want to temporarily switch between Node.js and io.js, you can use the ```nvm use iojs``` and ```nvm use node``` commands as needed.
+
+## License
+
+[MIT](https://github.com/renobit/vagrant-node-env/blob/master/LICENSE)
