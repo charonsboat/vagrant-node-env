@@ -45,8 +45,8 @@ SSH into your vagrant box and launch the test server:
 
 ```bash
 vagrant ssh
-cd www
-node server.js
+cd www/default
+npm start
 ```
 
 Now, open ```localhost:1337``` in your browser on your host machine. If everything worked correctly, you should see a "Hello, World!" message.
