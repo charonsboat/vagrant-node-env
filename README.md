@@ -60,7 +60,7 @@ If you want to use io.js in place of Node by default, you can run ```nvm alias d
 
 If you just want to temporarily switch between Node.js and io.js, you can use the ```nvm use iojs``` and ```nvm use node``` commands as needed.
 
-## Using Windows Host
+## Using Windows Hosts
 
 Since Windows file path limits are set to 260 characters by default, Vagrant will mount the ```www``` shared folder as a UNC path. This enables "long paths" in Windows, and should solve the common problem with npm installs failing under a Windows host.
 
