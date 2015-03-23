@@ -40,6 +40,9 @@ printf "Installing nvm..."
 git clone --quiet https://github.com/creationix/nvm.git /home/vagrant/.nvm && cd /home/vagrant/.nvm
 git checkout --quiet `git describe --abbrev=0 --tags`
 
+# backup .bashrc since we're going to change it
+cp /home/vagrant/.bashrc /home/vagrant/.bashrc.backup
+
 # automatically source nvm from the .bashrc file on login
 echo "source ~/.nvm/nvm.sh" >> /home/vagrant/.bashrc
 
@@ -72,13 +75,9 @@ npm install -g gulp
 npm install -g grunt-cli
 npm install -g bower
 npm install -g yo
-npm install -g karma
+npm install -g karma-cli
 npm install -g jasmine
 npm install -g testem
-
-printf "Fixing symlink issue with npm..."
-# backup .bashrc since we're going to change it
-cp /home/vagrant/.bashrc /home/vagrant/.bashrc.backup
 
 printf "Making sure ownership rights are correct in vagrant user directory..."
 # make sure everything in the vagrant directory is owned by vagrant
