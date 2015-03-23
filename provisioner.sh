@@ -72,14 +72,13 @@ npm install -g gulp
 npm install -g grunt-cli
 npm install -g bower
 npm install -g yo
+npm install -g karma
+npm install -g jasmine
+npm install -g testem
 
 printf "Fixing symlink issue with npm..."
 # backup .bashrc since we're going to change it
 cp /home/vagrant/.bashrc /home/vagrant/.bashrc.backup
-
-# override npm with an alias to always call "--no-bin-links" with npm (shouldn't hurt any normal commands)
-# if you don't want npm overridden, comment out the line below
-echo "alias npm='npm --no-bin-links'" >> /home/vagrant/.bashrc
 
 printf "Making sure ownership rights are correct in vagrant user directory..."
 # make sure everything in the vagrant directory is owned by vagrant

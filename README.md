@@ -66,6 +66,8 @@ Since Windows file path limits are set to 260 characters by default, Vagrant wil
 
 If you'd like more information about how I built this solution into the Vagrant environment, you can view the source of the Vagrantfile or view [this commit](https://github.com/renobit/vagrant-node-env/commit/bdf15f2f301e2b1660b839875e34f172ea8be227) where I first implemented it.
 
+If you don't want to enable symlinks in your shared directories (this is enabled by default), you can use ```npm install --no-bin-links``` instead of the standard install method.
+
 ## License
 
 [MIT](https://github.com/renobit/vagrant-node-env/blob/master/LICENSE)
