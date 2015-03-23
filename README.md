@@ -38,6 +38,9 @@ After a few minutes of downloading, upgrading, and configuring the box, you will
 - [Grunt](http://gruntjs.com/): Task Runner
 - [Bower](http://bower.io/): Front-End Package Manager
 - [Yeoman](http://yeoman.io/): Project Scaffolding Tool
+- [Testem](https://github.com/airportyh/testem): Test Runner
+- [Karma](http://karma-runner.github.io/0.12/index.html): Test Runner
+- [Jasmine](https://github.com/jasmine/jasmine): Testing Framework
 
 ## Testing
 
