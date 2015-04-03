@@ -68,17 +68,6 @@ npm install -g npm
 # remove old hash for npm so bash will find the new version
 hash -d npm
 
-printf "Installing common nodejs tools..."
-# install common nodejs tools
-npm install -g pm2
-npm install -g gulp
-npm install -g grunt-cli
-npm install -g bower
-npm install -g yo
-npm install -g karma-cli
-npm install -g jasmine
-npm install -g testem
-
 printf "Making sure ownership rights are correct in vagrant user directory..."
 # make sure everything in the vagrant directory is owned by vagrant
 chown -R vagrant:vagrant /home/vagrant --quiet

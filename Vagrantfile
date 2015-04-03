@@ -40,4 +40,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # call provisioner shell script
     config.vm.provision :shell, path: "./provisioner.sh"
+    config.vm.provision :shell, path: "./postinstall.sh", privileged: false
 end
