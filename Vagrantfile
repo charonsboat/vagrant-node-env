@@ -38,7 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         config.vm.synced_folder "./www", "/home/vagrant/www"
     end
 
-    # call provisioner shell script
+    # call provisioner shell scripts
     config.vm.provision :shell, path: "./provisioner.sh"
     config.vm.provision :shell, path: "./postinstall.sh", privileged: false
 end

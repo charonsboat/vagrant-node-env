@@ -1,6 +1,11 @@
-# NOTE: This script is meant to be run as the Vagrant user
+#!/bin/bash
+# NOTE: This script is meant to be run as the vagrant user
 
-printf "Running Post-Install as Vagrant User..."
+printf "Running Post-Install as vagrant user..."
+# set the source of nvm for this session
+source /home/vagrant/.nvm/nvm.sh
+nvm use stable
+
 # install common nodejs tools
 npm install -g pm2
 npm install -g gulp
