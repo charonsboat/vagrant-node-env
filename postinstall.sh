@@ -2,8 +2,11 @@
 # NOTE: This script is meant to be run as the vagrant user
 
 printf "Running Post-Install as vagrant user..."
-# set the source of nvm for this session
+# vagrant doesn't automatically load nvm source from .bashrc in provisioning
 source /home/vagrant/.nvm/nvm.sh
+
+# using latest stable version of node
+# change this to whatever version of node you want to install packages for
 nvm use stable
 
 # install common nodejs tools
