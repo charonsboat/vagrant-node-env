@@ -21,11 +21,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         # settings for VirtualBox provider
         config.vm.provider "virtualbox" do |v|
             v.memory = MAX_MEMORY
-            v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home/vagrant/www", "1"]
 
             if Vagrant::Util::Platform.windows?
                 v.customize ["sharedfolder", "add", :id, "--name", "www", "--hostpath", (("//?/" + File.dirname(__FILE__) + "/www").gsub("/","\\"))]
             end
+
+            v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/www", "1"]
         end
 
         if Vagrant::Util::Platform.windows?
