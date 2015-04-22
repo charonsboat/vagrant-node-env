@@ -9,12 +9,13 @@ source /home/vagrant/.nvm/nvm.sh
 # change this to whatever version of node you want to install packages for
 nvm use stable
 
+# NOTE: Customize the below packages to meet your personal needs
 # install common nodejs tools
 npm install -g pm2
 npm install -g gulp
 npm install -g grunt-cli
 npm install -g bower
 npm install -g yo
+npm install -g testem
 npm install -g karma-cli
 npm install -g jasmine
-npm install -g testem

@@ -42,6 +42,10 @@ After a few minutes of downloading, upgrading, and configuring the box, you will
 - [Karma](http://karma-runner.github.io/0.12/index.html): Test Runner
 - [Jasmine](https://github.com/jasmine/jasmine): Testing Framework
 
+#### Customizing Your Installation
+
+If you want to customize your included packages (see the above list), then you can easily do so by changing the ```postinstall.sh``` script. This script is run as the vagrant user, not root.
+
 ## Testing
 
 SSH into your vagrant box and launch the test server:
