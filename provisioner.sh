@@ -23,8 +23,9 @@ printf "Installing a few necessary packages..."
 # install required packages
 apt-get install -y git nodejs nodejs-legacy npm mongodb-org redis-server
 
-# make sure npm is up to date
-npm install -g npm
+# make sure npm is up to date (npm has trouble upgrading directly to 3.3.3 from 2.14.3, so we have to upgrade to 3.0.0 first)
+npm install -g npm@3.0.0
+npm install -g npm@3.3.3
 
 # remove old hash for npm so bash will find the new version
 hash -d npm
@@ -52,8 +53,9 @@ source /home/vagrant/.nvm/nvm.sh
 # install iojs with nvm
 nvm install iojs
 
-# make sure npm is up to date
-npm install -g npm
+# make sure npm is up to date (npm has trouble upgrading directly to 3.3.3 from 2.14.3, so we have to upgrade to 3.0.0 first)
+npm install -g npm@3.0.0
+npm install -g npm@3.3.3
 
 # remove old hash for npm so bash will find the new version
 hash -d npm
@@ -62,8 +64,9 @@ hash -d npm
 nvm install stable
 nvm alias default stable
 
-# make sure npm is up to date
-npm install -g npm
+# make sure npm is up to date (npm has trouble upgrading directly to 3.3.3 from 2.14.3, so we have to upgrade to 3.0.0 first)
+npm install -g npm@3.0.0
+npm install -g npm@3.3.3
 
 # remove old hash for npm so bash will find the new version
 hash -d npm
