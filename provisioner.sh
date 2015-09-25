@@ -71,6 +71,10 @@ npm install -g npm@3.3.3
 # remove old hash for npm so bash will find the new version
 hash -d npm
 
+# install stable version of node with nvm, and set it to the default version
+nvm install v0.*
+nvm alias default v0.*
+
 printf "Making sure ownership rights are correct in vagrant user directory..."
 # make sure everything in the vagrant directory is owned by vagrant
 chown -R vagrant:vagrant /home/vagrant --quiet
