@@ -6,4 +6,5 @@
 node_modules
 
 # Files to Ignore
+*.log
 npm-debug.log.*
