@@ -6,7 +6,7 @@
 # -*- mode: ruby; -*-
 
 VAGRANTFILE_API_VERSION = "2"
-MAX_MEMORY = 1024
+MAX_MEMORY = 512
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
@@ -36,6 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
     # call provisioner shell scripts
+    config.vm.provision :shell, path: "./enable-swap.sh", run: "always"
     config.vm.provision :shell, path: "./provisioner.sh"
     config.vm.provision :shell, path: "./postinstall.sh", privileged: false
 end
