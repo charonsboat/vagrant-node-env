@@ -1,3 +1,9 @@
+## !important
+
+**This project is no longer maintained.** Use [drmyersii/vagrant-env-basher](https://github.com/vagrant-env-basher) instead. As I have grown, so has my understanding of Vagrant and general dev processes. This project is a bit outdated, and my new Vagrant project, vagrant-env-basher, provides a clean, maintainable solution to this same problem (and then some!). Please check it out!
+
+\- David R. Myers II
+
 # vagrant-node-env
 
 A Node.js (or io.js) development environment built on [Vagrant](https://www.vagrantup.com/). Get up and running in about 60 seconds.
