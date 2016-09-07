@@ -1,6 +1,6 @@
 # !important
 
-**This project is no longer maintained.** Use [drmyersii/vagrant-env-basher](https://github.com/drmyersii/vagrant-env-basher) instead. As I have grown, so has my understanding of Vagrant and general dev processes. This project is a bit outdated, and my new Vagrant project, vagrant-env-basher, provides a clean, maintainable solution to this same problem (and then some!). Please check it out!
+**This project is no longer maintained.** Use [drm2/vebs](https://github.com/drm2/vebs) instead. As I have grown, so has my understanding of Vagrant and general dev processes. This project is a bit outdated, and my new Vagrant project, vebs, provides a clean, maintainable solution to this same problem (and then some!). Please check it out!
 
 \- David R. Myers II
 
@@ -15,12 +15,12 @@ This environment will allow you to build Node apps with minimal setup. You only 
 - VirtualBox: https://www.virtualbox.org/
 - Vagrant:    https://www.vagrantup.com/
 
-You should be able to use your choice of virtual machines, but I have only tested this in VirtualBox. If you have any problems, be sure to [create an issue](https://github.com/renobit/vagrant-node-env/issues).
+You should be able to use your choice of virtual machines, but I have only tested this in VirtualBox. If you have any problems, be sure to [create an issue](https://github.com/drm2/vagrant-node-env/issues).
 
 After you have those set up, you can get started by cloning this repo:
 
 ```bash
-git clone https://github.com/renobit/vagrant-node-env.git node-env
+git clone https://github.com/drm2/vagrant-node-env.git node-env
 ```
 
 Now, you can move into the new directory and launch the VM:
@@ -77,10 +77,10 @@ If you just want to temporarily switch between Node.js and io.js, you can use th
 
 Since Windows file path limits are set to 260 characters by default, Vagrant will mount the ```www``` shared folder as a UNC path. This enables "long paths" in Windows, and should solve the common problem with npm installs failing under a Windows host.
 
-If you'd like more information about how I built this solution into the Vagrant environment, you can view the source of the Vagrantfile or view [this commit](https://github.com/renobit/vagrant-node-env/commit/bdf15f2f301e2b1660b839875e34f172ea8be227) where I first implemented it.
+If you'd like more information about how I built this solution into the Vagrant environment, you can view the source of the Vagrantfile or view [this commit](https://github.com/drm2/vagrant-node-env/commit/bdf15f2f301e2b1660b839875e34f172ea8be227) where I first implemented it.
 
 If you don't want to enable symlinks in your shared directories (this is enabled by default), you can use ```npm install --no-bin-links``` instead of the standard install method.
 
 ## License
 
-[MIT](https://github.com/renobit/vagrant-node-env/blob/master/LICENSE)
+[MIT](https://github.com/drm2/vagrant-node-env/blob/master/LICENSE)
